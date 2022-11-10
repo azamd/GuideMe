@@ -1,5 +1,6 @@
 package com.esprit.guideme.entity;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -28,6 +29,11 @@ public class Cafe {
     private String linkFacebook;
     @ColumnInfo(name = "link_instagram")
     private String linkInstagram;
+
+    public Cafe() {
+
+    }
+
 
     public int getUid() {
         return uid;
@@ -117,19 +123,7 @@ public class Cafe {
         this.linkInstagram = linkInstagram;
     }
 
-    public Cafe(String cafeName, String description, String address, int startHour, int endHour, String menu, String phone, String email, String linkFacebook, String linkInstagram) {
-        this.cafeName = cafeName;
-        this.description = description;
-        this.address = address;
-        this.startHour = startHour;
-        this.endHour = endHour;
-        this.menu = menu;
-        this.phone = phone;
-        this.email = email;
-        this.linkFacebook = linkFacebook;
-        this.linkInstagram = linkInstagram;
-    }
-
+    @NonNull
     @Override
     public String toString() {
         return "Cafe{" +
@@ -144,5 +138,19 @@ public class Cafe {
                 ", linkFacebook='" + linkFacebook + '\'' +
                 ", linkInstagram='" + linkInstagram + '\'' +
                 '}';
+    }
+
+    public Cafe(int uid, String cafeName, String description, String address, int startHour, int endHour, String menu, String phone, String email, String linkFacebook, String linkInstagram) {
+        this.uid = uid;
+        this.cafeName = cafeName;
+        this.description = description;
+        this.address = address;
+        this.startHour = startHour;
+        this.endHour = endHour;
+        this.menu = menu;
+        this.phone = phone;
+        this.email = email;
+        this.linkFacebook = linkFacebook;
+        this.linkInstagram = linkInstagram;
     }
 }
