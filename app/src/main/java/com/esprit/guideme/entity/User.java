@@ -75,7 +75,7 @@ public class User {
     public User() {
     }
 
-    public User(int uid, String firstName, String lastName, String password, String email, boolean isAdmin) {
+    public User(int uid, String firstName, String lastName, String email, String password, boolean isAdmin) {
         this.uid = uid;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -90,8 +90,8 @@ public class User {
                 "uid=" + uid +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
                 ", isAdmin=" + isAdmin +
                 ", loggedIn=" + loggedIn +
                 '}';
