@@ -153,4 +153,6 @@ public class Cafe {
         this.linkFacebook = linkFacebook;
         this.linkInstagram = linkInstagram;
     }
+
+
 }

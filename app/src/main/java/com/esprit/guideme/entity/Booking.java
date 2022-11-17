@@ -104,4 +104,7 @@ public class Booking {
                 ", loungeid=" + loungeid +
                 '}';
     }
+
+    public Booking() {
+    }
 }

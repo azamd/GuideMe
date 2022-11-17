@@ -20,28 +20,28 @@ public interface UserDao {
     @Delete
     void Delete(User u);
 
-    @Query("SELECT * FROM user")
+    @Query("SELECT * FROM Users")
     List<User> getAll();
 
-    @Query("SELECT * FROM user WHERE uid IN (:userIds)")
+    @Query("SELECT * FROM Users WHERE uid IN (:userIds)")
     List<User> loadAllByIds(int[] userIds);
 
-    @Query("SELECT * FROM user WHERE firstName LIKE :first AND " +
+    @Query("SELECT * FROM Users WHERE first_name LIKE :first AND " +
             "last_name LIKE :last LIMIT 1")
     User findByName(String first, String last);
 
-    @Query("SELECT * FROM user WHERE email LIKE :email LIMIT 1")
+    @Query("SELECT * FROM Users WHERE email LIKE :email LIMIT 1")
     User findByEmail(String email);
 
-    @Query("SELECT * FROM user WHERE uid=:uid LIMIT 1")
+    @Query("SELECT * FROM Users WHERE uid=:uid LIMIT 1")
     User findById(int uid);
 
     @Transaction
-    @Query("SELECT * FROM user")
+    @Query("SELECT * FROM Users")
     public List<UserWithBookings> getUsersWithBookings();
 
     @Transaction
-    @Query("SELECT * FROM user")
+    @Query("SELECT * FROM Users")
     public List<UserWithReviews> getUsersWithReviews();
 
     @Insert

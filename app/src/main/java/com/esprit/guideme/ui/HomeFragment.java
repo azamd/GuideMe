@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-import com.example.myfirstapplication.R;
+import com.esprit.guideme.R;
 
 public class HomeFragment extends Fragment {
 

@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.myfirstapplication.R;
+import com.esprit.guideme.R;
 
 public class ComplaintsFragment extends Fragment {
     @Nullable

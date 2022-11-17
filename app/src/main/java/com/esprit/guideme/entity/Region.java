@@ -33,6 +33,9 @@ public class Region {
         this.regionName = regionName;
     }
 
+    public Region() {
+    }
+
     @Override
     public String toString() {
         return "Region{" +

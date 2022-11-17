@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myfirstapplication.R;
+import com.esprit.guideme.R;
 
 public class editprofile extends AppCompatActivity {
 

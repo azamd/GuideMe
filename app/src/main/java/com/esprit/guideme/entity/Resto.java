@@ -124,4 +124,7 @@ public class Resto {
                 ", linkInstagram='" + linkInstagram + '\'' +
                 '}';
     }
+
+    public Resto() {
+    }
 }

@@ -126,4 +126,7 @@ public class Museum {
                 ", linkInstagram='" + linkInstagram + '\'' +
                 '}';
     }
+
+    public Museum() {
+    }
 }

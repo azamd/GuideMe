@@ -152,4 +152,7 @@ public class Review {
                 ", loungeid=" + loungeid +
                 '}';
     }
+
+    public Review() {
+    }
 }

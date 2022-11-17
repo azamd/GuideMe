@@ -125,4 +125,7 @@ public class Lounge {
                 ", linkInstagram='" + linkInstagram + '\'' +
                 '}';
     }
+
+    public Lounge() {
+    }
 }
