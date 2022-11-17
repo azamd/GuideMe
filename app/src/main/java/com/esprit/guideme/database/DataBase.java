@@ -28,6 +28,7 @@ import com.esprit.guideme.entity.User;
 @Database(entities = {User.class, Region.class, Resto.class, Cafe.class, Lounge.class, Museum.class, Booking.class, Review.class}, version = 1, exportSchema = false)
 
 public abstract class DataBase extends RoomDatabase {
+    public static final String local_db_name = "guide_me_db";
     private static DataBase instance;
     public abstract UserDao userDao();
     public abstract RegionDao regionDao();
@@ -41,7 +42,7 @@ public abstract class DataBase extends RoomDatabase {
 
     public static DataBase getDatabase(Context context) {
         if (instance == null) {
-            instance = Room.databaseBuilder(context.getApplicationContext(), DataBase.class, "guide_me_db")
+            instance = Room.databaseBuilder(context.getApplicationContext(), DataBase.class, DataBase.local_db_name)
 
                     .allowMainThreadQueries()
                     .build();

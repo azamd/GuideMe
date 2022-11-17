@@ -16,6 +16,10 @@ public class User {
     private String password;
     @ColumnInfo(name = "email")
     private String email;
+    @ColumnInfo(name = "isAdmin")
+    private boolean isAdmin;
+    @ColumnInfo(name = "loggedIn")
+    private boolean loggedIn = false;
 
 
     public int getUid() {
@@ -52,14 +56,32 @@ public class User {
 
     public void setEmail(String email) { this.email = email;}
 
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
+    }
+
+    public boolean isLoggedIn() {
+        return loggedIn;
+    }
+
+    public void setLoggedIn(boolean loggedIn) {
+        this.loggedIn = loggedIn;
+    }
+
     public User() {
     }
 
-    public User(String firstName, String lastName, String password, String email) {
+    public User(int uid, String firstName, String lastName, String password, String email, boolean isAdmin) {
+        this.uid = uid;
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = password;
         this.email = email;
+        this.isAdmin = isAdmin;
     }
 
     @Override
@@ -70,6 +92,8 @@ public class User {
                 ", lastName='" + lastName + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
+                ", isAdmin=" + isAdmin +
+                ", loggedIn=" + loggedIn +
                 '}';
     }
 }
